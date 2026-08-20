@@ -55,7 +55,7 @@ if __name__ == '__main__':
     state_dict = torch.load(args.model_file)['model_state_dict']
     model.load_state_dict(state_dict, strict=False)
 
-    GT_path = args.divide + "_AGDDO15n_gt.t7"
+    GT_path = args.divide + "_AGDDO15_gt.t7"
     if not os.path.exists(GT_path):
         process_gt(args)
     GT_masks = torch.load(GT_path)
